@@ -1,0 +1,120 @@
+  /* create-user.css */
+  .create-user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .create-user-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgb(59, 57, 57);
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+  }
+
+  .create-user-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .create-user-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    transition: border 0.3s ease;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #5d9bfa;
+  }
+
+  .btn-submit {
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-submit:hover {
+    background-color: #c52727;
+  }
+
+  .form-actions {
+    text-align: center;
+  }
+
+
+  .header {
+  height: 65px;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+  /* align-items: center; */
+  /* background-color: #aee0ff; */
+  background-color: #3f51b5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 20px;
+  position: fixed; /* Make the header fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+.header .logo {
+  height: 65px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #3f51b5;
+  padding-left: 20px; /* Add padding to move the logo slightly from the edge */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.header .logo img {
+  height: 30px; /* Adjusted logo size */
+}
+
+

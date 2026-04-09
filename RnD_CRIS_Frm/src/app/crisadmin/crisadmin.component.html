@@ -1,0 +1,56 @@
+<body>
+  <div class="login-container">
+    <header class="header">
+      <div class="logo">
+        <img src="assets/CRIS_logo.png" alt="CRIS Logo" class="logo-image">
+        <img src="assets/icon_rly1.png" alt="CRIS Logo" class="icon-image" (click)="toggleDropdown($event)">
+      </div>
+      <!-- User profile dropdown -->
+       <div class="dropdown-menu" [class.show]="dropdownOpen">
+       <p class="dropdown-username">{{ currentUser?.username }}</p>
+      <p class="dropdown-role">{{ currentUser?.role }}</p>
+    </div>
+   </header>
+
+    <button (click)="onLogout()" class="logout-button">Logout</button> 
+
+    <div class="landing-page">
+       <label class="label">  
+        <h2 class="text-primary my-1"> 
+          <span class="text-PRS-theme">Admin Portal</span>
+        </h2> 
+       </label>
+      
+      <div class="links">
+        <a routerLink="/employee-access" class="link-button">Vendor Details</a>
+      </div>
+       <!-- Add a button to create a new user -->
+       <div class="links">
+        <button (click)="createUser()" class="link-button">Create New User</button>
+       </div>
+      
+       <div class="links">
+        <a routerLink="/user-access" class="link-button">User Details</a> 
+      </div>
+
+       <div class="links">
+        <button (click)="startBroadcast()" class="link-button" >Broadcast Message</button>
+      </div>
+
+      <div class="links">
+        <button (click)="stopBroadcast()" [disabled]="!isBroadcasting" class="link-button">Stop Broadcast</button>
+      </div>
+      <br>
+      <br>
+      
+      
+      <div class="scrolling-container" *ngIf="isBroadcasting">
+        <p class="scrolling-message">{{ message }}</p>
+      </div>
+
+      </div>
+      
+      
+
+  </div>
+</body> 

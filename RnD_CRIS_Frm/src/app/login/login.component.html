@@ -1,0 +1,52 @@
+<body>
+
+  <div class="login-container">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo">
+        <img src="assets/CRIS_logo.png" alt="CRIS Logo" class="image-fluid logo-image">
+      </div>
+    </header>
+   
+    <!-- <div class="scrolling-container">
+      <p class="scrolling-message">{{ message }}</p>
+    </div> -->
+
+   
+    <!-- Centered logo section -->
+    <div class="clogo"> 
+      <img src="assets/IR_logo.png" alt="IndianRail Logo" class="image-fluid ir-logo">
+    </div>
+
+    <!-- Title Section -->
+    <div class="login-title">
+      <h1 class="text-primary">Vendor <span class="text-theme">Management</span></h1>
+      <h2 class="text-primary login-heading">Login</h2>
+    </div>
+
+    <!-- Login Form -->
+    <form (ngSubmit)="onLogin()" class="login-form">
+      <div class="form-group">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" required class="form-input" placeholder="Enter your username">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required class="form-input" placeholder="Enter your password">
+      </div>
+<br>
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <button type="submit" class="btn-submit">Login</button>
+    </form>
+  </div>
+
+<div *ngIf="broadcastMessage" class="announcement-banner">
+  {{ broadcastMessage }}
+</div>
+
+</body>

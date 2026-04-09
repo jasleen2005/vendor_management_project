@@ -1,0 +1,269 @@
+/* src/app/landing-page/landing-page.component.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  background-image: url('src/assets/background.jpeg'); 
+  background-size: cover; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  padding: 20px;
+  margin-top: 15px;
+}
+
+/* Header Styles */
+.header {
+  height: 65px;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+  /* align-items: center; */
+  /* background-color: #aee0ff; */
+  background-color: #3f51b5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 20px;
+  position: fixed; /* Make the header fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+.header .logo {
+  height: 65px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #3f51b5;
+  padding-left: 20px; /* Add padding to move the logo slightly from the edge */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.header .logo img {
+  height: 30px; /* Adjusted logo size */
+}
+
+/* Logout Button Styles */
+.logout-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: rgb(241, 3, 3);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  z-index: 1100; /* Ensures logout button stays on top */
+}
+
+.logout-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Container Styling */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  /* padding-top: 80px; Adjusted to avoid overlap with fixed header */
+  background: #f4f7fc;
+  /* padding: 20px;
+  box-sizing: border-box; */
+  flex-grow: 1;
+  padding-top: 90px; /* Add space for the fixed header */
+  padding-bottom: 20px;
+  text-align: center;
+  margin: center;
+}
+
+/* Landing Page Header Styling */
+.landing-page .label {
+  margin-bottom: 20px;
+}
+
+.landing-page h1 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 600;
+}
+
+.text-primary {
+  color: black;
+}
+
+.text-PRS-theme {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+}
+
+/* Link Button Styling */
+.links {
+  margin-top: 20px;
+}
+
+.link-button {
+  display: block;
+  padding: 20px;
+  background-color: #025dbe;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: center;
+  margin-left: 2px;
+  margin-right: 8px;
+}
+
+.link-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Image */
+.image-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.user-info {
+  display: flex;
+  top: 10px;
+  right: 50px;
+  align-items: center;  /* Vertically center the username */
+  font-size: 16px;
+  /* background-color: #ff4d4d; */
+  
+  color: white;
+  font-weight: bold;  
+}
+
+/* Styling for the user name text */
+.user-name {
+  margin-left: 30px; /* Capitalize first letter of the name */
+}
+/* Ensure the page content does not overlap the header */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .landing-page h1 {
+    font-size: 28px;
+  }
+
+  .link-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+.scrolling-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.scrolling-message {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 10s linear infinite;
+  font-size: 24px;
+  color: #007bff;
+  padding: 10px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.login-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px black;
+  padding: 30px 40px 0px 40px; /* Bottom padding minimized */
+  width: 358px;
+  margin-left: 560px;
+  margin-top: 90px;
+  margin-bottom: 0px;
+  height: auto; /* 👈 Adjusts height to fit content */
+
+  /* Optional: Uncomment if you want centering */
+  /*
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  */
+}
+
+.icon-image{
+  margin-left: 1150px;
+  cursor: pointer;
+  height: 40px;
+  width: 35px;
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 65px; /* right below the fixed header */
+  right: 20px; /* align to the admin icon */
+  background-color: #1f2937;
+  border-radius: 8px;
+  padding: 10px;
+  display: none;
+  min-width: 180px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1100; /* above header */
+  font-size: 18px;
+  text-align: center; /* horizontal center */
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.header .logo {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+

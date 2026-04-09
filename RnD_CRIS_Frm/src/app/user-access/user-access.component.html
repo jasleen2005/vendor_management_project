@@ -1,0 +1,46 @@
+<body>
+  <div class="login-container">
+    <header class="header">
+      <div class="logo">
+        <img src="assets/CRIS_logo.png" alt="CRIS Logo" class="logo-image">
+      </div>
+    </header> 
+    <br><br><br>
+    
+    <div class="container">
+      <!-- Users Section -->
+      <section class="vendors-section">
+        <h2 class="section-title">Users</h2>
+
+        <!-- Search and Sort Container -->
+        <div class="search-sort-container">
+          <input type="text" [(ngModel)]="filter" (input)="applyFilter()" placeholder="Search username" class="search-input">
+          <button (click)="sortUsers()" class="sort-button">Sort User Alphabetically</button>
+        </div>
+        
+        <!-- User Table -->
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of filteredUsers">
+              <td>{{ user.name }}</td>
+              <td>{{ user.role }}</td>
+              <td>{{ user.status }}</td>
+              <td>
+              <button (click)="approveUser(user)" class="approve-btn">Approve</button>
+              <button (click)="rejectUser(user)" class="reject-btn">Reject</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</body>

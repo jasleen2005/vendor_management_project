@@ -1,0 +1,45 @@
+<!-- src/app/landing-page/landing-page.component.html -->
+<body>
+  <div class="login-container">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo">
+        <img src="assets/CRIS_logo.png" alt="CRIS Logo" class="logo-image">
+        <img src="assets/icon_rly1.png" alt="CRIS Logo" class="icon-image" (click)="toggleDropdown($event)">
+      </div>
+      <!-- User profile dropdown -->
+       <div class="dropdown-menu" [class.show]="dropdownOpen">
+         <p class="dropdown-username">{{ currentUser?.username }}</p>
+         <p class="dropdown-role">{{ currentUser?.role }}</p>
+       </div>
+  
+    </header>
+    
+    <!-- Logout Button -->
+    <button (click)="onLogout()" class="logout-button">Logout</button>
+
+    <!-- Main Landing Page Content -->
+    <div class="landing-page">
+      <!-- <h1 class="title">Welcome to the <span class="highlight">Vendor Management Portal</span></h1> -->
+      <h1><span class="highlight">Vendor Management Portal</span></h1> 
+      <p class="subtitle">Select an option:</p>
+
+      <!-- Links to Different Sections -->
+      <div class="links">
+        <a routerLink="/vendor-form" class="link-button">Vendor Application Form</a>
+        <a routerLink="/subscriber-form" class="link-button">Subscriber Form</a>
+        <a routerLink="/email"></a>   
+      </div>
+    </div>
+  </div>
+  
+  
+<div *ngIf="broadcastMessage" class="announcement-banner">
+  {{ broadcastMessage }}
+</div>
+
+
+</body>
+
+
+

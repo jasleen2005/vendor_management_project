@@ -1,0 +1,183 @@
+
+body {
+    background-image: url('src/assets/background.jpeg'); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    padding: 20px;
+    
+     margin-top: 15px;
+}
+  
+   .header {
+    height: 65px;
+    display: flex;
+    justify-content: space-between; 
+    justify-content: flex-start;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 20px;
+    position: fixed; /* Make the header fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it is above other elements */
+  } 
+
+  .header .logo {
+    height: 65px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #3f51b5;
+    padding-left: 20px; /* Add padding to move the logo slightly from the edge */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .header .logo img {
+    height: 30px;
+    display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px; 
+
+    
+  }
+  .label {
+    text-align: center;
+  }
+
+  .clogo {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    /*align-items: center;    Optional: Center vertically if needed */
+     /*height: 100vh;           Optional: Set height to the full viewport height */
+  }
+  .image-fluid {
+    max-width: 100%; /* Ensures the image scales well */
+    height: auto;    /* Maintains the aspect ratio */
+  }
+  .w-32 {
+    width: 128px; /* 32 * 4px = 128px */
+  }
+
+  /* to improve display */
+  /* Login Container */
+.login-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px black;
+  align-items: center;
+  padding:30px 40px 30px 40px;
+  width: 350px;
+  align-items: center;
+  margin-left: 550px;
+  margin-top:75px;
+  margin-bottom: -30px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  padding: 20px;
+  box-sizing: border-box; */
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* .logo-image {
+  height: 80px;
+  width: 80px;
+} */
+
+/* Centered Logo */
+.clogo {
+  margin-bottom: 20px;
+}
+
+.ir-logo {
+  height: 80px;
+  width: auto;
+
+}
+
+/* Login Title Styles */
+.login-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.text-primary {
+  color: black;
+}
+
+.text-theme {
+  color: black;
+}
+
+.login-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-submit{
+  width:100%;
+  padding:12px 14px;
+  background-color: #d32f2f;
+  color:#fff;
+  font-size:17px;
+  border:none;
+  border-radius: 8px;
+  cursor:pointer;
+  transition: background-color 0.3s ease;
+}
+button[type="submit"] :hover {
+  background-color: #b71c1c;
+}
+
+.form-label{
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  font-family: sans-serif;
+}
+
+.form-input{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease,box-shadow 0.3 sec ease;
+  outline: none;
+
+}
+
+ .announcement-banner {
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid orange;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  
+} 

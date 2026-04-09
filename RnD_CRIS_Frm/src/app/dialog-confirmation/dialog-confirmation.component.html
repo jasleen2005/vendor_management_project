@@ -1,0 +1,22 @@
+<!-- Vendor Popup -->
+<div *ngIf="data.type === 'vendor'">
+  <h2 mat-dialog-title>Vendor Registered Successfully</h2>
+  <mat-dialog-content>
+    <p></p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" (click)="onSubscriberClick()" class="link-button">Go to Subscriber Form</button>
+  </mat-dialog-actions>
+</div>
+
+<!-- Subscriber Popup -->
+<div *ngIf="data.type === 'subscriber'">
+  <h2 mat-dialog-title>Subscriber Id Created Successfully</h2>
+  <mat-dialog-content>
+    <p><strong>Subscriber Code:</strong> {{ data.subscriber_id }}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="onLandingClick()" class="link-button">Back to Home</button>
+  </mat-dialog-actions>
+</div>
+
