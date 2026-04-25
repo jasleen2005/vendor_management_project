@@ -25,7 +25,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('vendor.urls')), 
-    path('', include('vendor.urls')),
+    # path('', include('vendor.urls')),
     path('send-email/', views.send_email_view, name='send_email'),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
