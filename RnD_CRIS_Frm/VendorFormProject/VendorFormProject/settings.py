@@ -230,7 +230,7 @@ MIDDLEWARE = [
 # CORS SETTINGS
 # --------------------
 CORS_ALLOWED_ORIGINS = [
-  'vendor-management-project-xbe7.vercel.app',
+   'https://vendor-management-project-xbe7.vercel.app',
     'http://localhost:4200',  # Angular frontend
 ]
 
