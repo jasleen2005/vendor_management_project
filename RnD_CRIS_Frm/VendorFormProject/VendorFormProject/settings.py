@@ -187,7 +187,9 @@ DEBUG = True
 # Allow local + Angular frontend access
 ALLOWED_HOSTS = ['localhost', '127.0.0.1',
                  'vendor-management-project-2-0c08.onrender.com',
-    '.onrender.com']
+    '.onrender.com', 
+                'vendor-management-project-xbe7.vercel.app',     
+    '.vercel.app']
 
 # --------------------
 # APPLICATIONS
