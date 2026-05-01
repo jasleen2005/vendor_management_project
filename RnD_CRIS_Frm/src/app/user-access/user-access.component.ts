@@ -61,10 +61,6 @@ export class UserAccessComponent implements OnInit {
 
   approveUser(user: any) {
   this.http.post(`http://localhost:8000/api/users/${user.id}/approve/`, {}).subscribe(() => {
-    // this.http.post(
-    //   `${this.BASE_URL}/api/users/${user.id}/approve/`,
-    //   {}
-    // ).subscribe(() => {
     user.status = "Approved";
   });
 }
