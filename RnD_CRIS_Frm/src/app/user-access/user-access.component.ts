@@ -23,6 +23,7 @@ export class UserAccessComponent implements OnInit {
   filteredUsers: newuser[] = [];
   filter: string = '';
 
+  private BASE_URL = 'https://vendor-management-project-2-0c08.onrender.com';
   constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -30,7 +31,11 @@ export class UserAccessComponent implements OnInit {
   }
 
   fetchUsers() {
-    this.http.get<{ status: string; users: newuser[] }>('http://localhost:8000/new-user-details/')
+     this.http
+      .get<{ status: string; users: newuser[] }>(
+        `${this.BASE_URL}/new-user-details/`
+      )
+    // this.http.get<{ status: string; users: newuser[] }>('http://localhost:8000/new-user-details/')
       .subscribe({
         next: (data) => {
           console.log('Users from API:', data);
@@ -55,13 +60,21 @@ export class UserAccessComponent implements OnInit {
   }
 
   approveUser(user: any) {
-  this.http.post(`http://localhost:8000/api/users/${user.id}/approve/`, {}).subscribe(() => {
+  // this.http.post(`http://localhost:8000/api/users/${user.id}/approve/`, {}).subscribe(() => {
+    this.http.post(
+      `${this.BASE_URL}/api/users/${user.id}/approve/`,
+      {}
+    ).subscribe(() => {
     user.status = "Approved";
   });
 }
   
   rejectUser(user: any) {
-  this.http.post(`http://localhost:8000/api/users/${user.id}/reject/`, {}).subscribe(() => {
+     this.http.post(
+      `${this.BASE_URL}/api/users/${user.id}/reject/`,
+      {}
+    ).subscribe(() => {
+  // this.http.post(`http://localhost:8000/api/users/${user.id}/reject/`, {}).subscribe(() => {
     user.status = "Rejected";
   });
 }
