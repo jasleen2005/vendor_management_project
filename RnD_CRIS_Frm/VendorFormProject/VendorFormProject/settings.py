@@ -234,6 +234,11 @@ CORS_ALLOWED_ORIGINS = [
     # 'http://localhost:4200',  # Angular frontend
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://vendor-management-project-xbe7.vercel.app',
+    'https://*.vercel.app',
+]
+
 # --------------------
 # URLS & WSGI
 # --------------------
