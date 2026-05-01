@@ -14,6 +14,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./crisadmin.component.css']
 })
 export class CrisadminComponent {
+   private BASE_URL = 'https://vendor-management-project-2-0c08.onrender.com/api';
   
   constructor( private router: Router, private location: Location, private http: HttpClient) {}
   message: string = '';
@@ -25,7 +26,8 @@ export class CrisadminComponent {
   ngOnInit() {
   const token = localStorage.getItem('access_token'); // NEW
 
-  this.http.get('http://localhost:8000/api/current_user/', {
+  // this.http.get('http://localhost:8000/api/current_user/', {
+      this.http.get(`${this.BASE_URL}/current_user/`, {
     headers: token ? { Authorization: `Bearer ${token}` } : {}  // NEW
   }).subscribe({
     next: (data: any) => {
@@ -61,7 +63,8 @@ export class CrisadminComponent {
   startBroadcast() {
   const inputMessage = prompt('Enter broadcast message:');
   if (inputMessage) {
-    this.http.post('http://localhost:8000/api/active-message/', { message: inputMessage })
+    // this.http.post('http://localhost:8000/api/active-message/', { message: inputMessage })
+       this.http.post(`${this.BASE_URL}/active-message/`, { message: inputMessage })
       .subscribe(() => {
         this.message = inputMessage;
         this.isBroadcasting = true;
@@ -70,7 +73,8 @@ export class CrisadminComponent {
 }
 
 stopBroadcast() {
-  this.http.delete('http://localhost:8000/api/active-message/')
+  // this.http.delete('http://localhost:8000/api/active-message/')
+     this.http.delete(`${this.BASE_URL}/active-message/`)
     .subscribe(() => {
       this.message = '';
       this.isBroadcasting = false;
