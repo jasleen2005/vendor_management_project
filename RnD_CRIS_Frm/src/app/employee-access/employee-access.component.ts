@@ -52,7 +52,8 @@ export class EmployeeAccessComponent implements OnInit {
   }
 
   fetchVendors() {
-    this.http.get<Vendor[]>('http://localhost:8000/api/vendor/')
+    // this.http.get<Vendor[]>('http://localhost:8000/api/vendor/')
+      this.http.get<Vendor[]>('https://vendor-management-project-2-0c08.onrender.com/api/vendor/')
       .subscribe({
         next: (data) => {
           console.log('Vendors from API:', data);
@@ -66,7 +67,7 @@ export class EmployeeAccessComponent implements OnInit {
   }
 
   fetchSubscribers() {
-    this.http.get<Subscriber[]>('http://localhost:8000/api/subscribers/')
+    this.http.get<Subscriber[]>('https://vendor-management-project-2-0c08.onrender.com/api/subscribers/')
       .subscribe({
         next: (data) => {
           console.log('Subscribers from API:', data);
