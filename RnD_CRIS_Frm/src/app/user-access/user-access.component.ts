@@ -23,7 +23,7 @@ export class UserAccessComponent implements OnInit {
   filteredUsers: newuser[] = [];
   filter: string = '';
 
-  private BASE_URL = 'https://vendor-management-project-2-0c08.onrender.com';
+  // private BASE_URL = 'https://vendor-management-project-2-0c08.onrender.com';
   constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -31,11 +31,7 @@ export class UserAccessComponent implements OnInit {
   }
 
   fetchUsers() {
-     this.http
-      .get<{ status: string; users: newuser[] }>(
-        `${this.BASE_URL}/new-user-details/`
-      )
-    // this.http.get<{ status: string; users: newuser[] }>('http://localhost:8000/new-user-details/')
+    this.http.get<{ status: string; users: newuser[] }>('http://localhost:8000/new-user-details/')
       .subscribe({
         next: (data) => {
           console.log('Users from API:', data);
