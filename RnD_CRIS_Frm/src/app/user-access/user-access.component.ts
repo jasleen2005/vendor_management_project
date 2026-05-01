@@ -65,11 +65,7 @@ export class UserAccessComponent implements OnInit {
   });
 }
   
-  rejectUser(user: any) {
-    //  this.http.post(
-    //   `${this.BASE_URL}/api/users/${user.id}/reject/`,
-    //   {}
-    // ).subscribe(() => {
+  rejectUser(user: any){
   this.http.post(`http://localhost:8000/api/users/${user.id}/reject/`, {}).subscribe(() => {
     user.status = "Rejected";
   });
