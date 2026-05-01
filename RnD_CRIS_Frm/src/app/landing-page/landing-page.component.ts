@@ -51,15 +51,18 @@ export class LandingPageComponent {
 }
 
 ngOnInit(): void {
+  const BASE_URL = 'https://vendor-management-project-2-0c08.onrender.com/api';
     // Get active broadcast message from Django
-    this.http.get<{ message: string }>('http://localhost:8000/api/active-message/')
+    // this.http.get<{ message: string }>('http://localhost:8000/api/active-message/')
+   this.http.get<{ message: string }>(`${BASE_URL}/active-message/`)
       .subscribe(data => {
         this.broadcastMessage = data.message;
       });
 
     const token = localStorage.getItem('access_token'); // NEW
   
-    this.http.get('http://localhost:8000/api/current_user/', {
+    // this.http.get('http://localhost:8000/api/current_user/', {
+       this.http.get(`${BASE_URL}/current_user/`, {
       headers: token ? { Authorization: `Bearer ${token}` } : {}  // NEW
     }).subscribe({
       next: (data: any) => {
