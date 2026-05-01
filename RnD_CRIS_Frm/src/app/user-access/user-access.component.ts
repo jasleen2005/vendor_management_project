@@ -60,21 +60,21 @@ export class UserAccessComponent implements OnInit {
   }
 
   approveUser(user: any) {
-  // this.http.post(`http://localhost:8000/api/users/${user.id}/approve/`, {}).subscribe(() => {
-    this.http.post(
-      `${this.BASE_URL}/api/users/${user.id}/approve/`,
-      {}
-    ).subscribe(() => {
+  this.http.post(`http://localhost:8000/api/users/${user.id}/approve/`, {}).subscribe(() => {
+    // this.http.post(
+    //   `${this.BASE_URL}/api/users/${user.id}/approve/`,
+    //   {}
+    // ).subscribe(() => {
     user.status = "Approved";
   });
 }
   
   rejectUser(user: any) {
-     this.http.post(
-      `${this.BASE_URL}/api/users/${user.id}/reject/`,
-      {}
-    ).subscribe(() => {
-  // this.http.post(`http://localhost:8000/api/users/${user.id}/reject/`, {}).subscribe(() => {
+    //  this.http.post(
+    //   `${this.BASE_URL}/api/users/${user.id}/reject/`,
+    //   {}
+    // ).subscribe(() => {
+  this.http.post(`http://localhost:8000/api/users/${user.id}/reject/`, {}).subscribe(() => {
     user.status = "Rejected";
   });
 }
