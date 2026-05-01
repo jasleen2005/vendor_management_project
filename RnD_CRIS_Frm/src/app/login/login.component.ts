@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     // Get active broadcast message from Django
     // this.http.get<{ message: string }>('http://localhost:8000/api/active-message/')
        this.http.get<{ message: string }>(
-    'https://vendor-management-project-2-0c08.onrender.com/api/active-message/)
+    'https://vendor-management-project-2-0c08.onrender.com/api/active-message/')
       .subscribe(data => {
         this.broadcastMessage = data.message;
       });
