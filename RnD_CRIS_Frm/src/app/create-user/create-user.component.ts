@@ -20,8 +20,9 @@ export class CreateUserComponent {
   password: string = '';
   role: string = '';
 
-  private apiUrl = 'http://localhost:8000/';
-
+  // private apiUrl = 'http://localhost:8000/';
+private apiUrl = ' https://vendor-management-project-2-0c08.onrender.com';
+  
   constructor(private router: Router,private http: HttpClient) {}
     
   onCreateUser() {
