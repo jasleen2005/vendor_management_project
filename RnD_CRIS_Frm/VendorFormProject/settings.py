@@ -98,26 +98,36 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # VendorFormProject/settings.py
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'vendor_database_final',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }  
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'vendor_database_final',
+#         'USER': 'postgres',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }  
+# }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'vendor_database_final',
+#         'USER': 'postgres',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }  
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'vendor_database_final',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'NAME': 'vendor-db',
+        'USER': 'vendor_database_final_user',
+        'PASSWORD': 'T223OeesoZUjwwedqHrvAPDRWeYWea1d',  # Change if needed
+        'HOST': 'dpg-d7q77plckfvc739kjbmg-a.oregon-postgres.render.com',
         'PORT': '5432',
-    }  
+    }
 }
 
 # Password validation
