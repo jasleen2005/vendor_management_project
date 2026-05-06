@@ -17,7 +17,8 @@ from .views import home
 urlpatterns = [
     path('', home, name='home'),
     path('vendors/', views.vendor_list, name='vendor_list'),
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),   
+    # path('api/', include(router.urls)),
     # path('create/', views.create_user, name='create_user'),
     #  path('send-email/', views.send_email_view, name='send_email'),
     path('api/active-message/', views.active_message, name='active_message'),
