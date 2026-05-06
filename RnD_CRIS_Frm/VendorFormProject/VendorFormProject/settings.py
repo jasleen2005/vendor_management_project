@@ -272,7 +272,7 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'vendor-db',
+        'NAME': 'vendor_database_final',
         'USER': 'vendor_database_final_user',
         'PASSWORD': 'T223OeesoZUjwwedqHrvAPDRWeYWea1d',  # Change if needed
         'HOST': 'dpg-d7q77plckfvc739kjbmg-a.oregon-postgres.render.com',
