@@ -30,7 +30,7 @@ interface Division {
 })
 export class VendorService {
   // private apiUrl = 'http://localhost:8000/api';
-  private apiUrl = 'https://vendor-management-project-2-0c08.onrender.com';
+  private apiUrl = 'https://vendor-management-project-2-0c08.onrender.com/api';
 
   // to broadcast message - start
   private broadcastSubject = new BehaviorSubject<string>(''); // Holds the current broadcast message
