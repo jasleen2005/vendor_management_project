@@ -56,13 +56,13 @@ export class UserAccessComponent implements OnInit {
   }
 
   approveUser(user: any) {
-  this.http.post(`http://localhost:8000/api/users/${user.id}/approve/`, {}).subscribe(() => {
+  this.http.post(`https://vendor-management-project-2-0c08.onrender.com/api/users/${user.id}/approve/`, {}).subscribe(() => {
     user.status = "Approved";
   });
 }
   
   rejectUser(user: any){
-  this.http.post(`http://localhost:8000/api/users/${user.id}/reject/`, {}).subscribe(() => {
+  this.http.post(`https://vendor-management-project-2-0c08.onrender.com/api/users/${user.id}/reject/`, {}).subscribe(() => {
     user.status = "Rejected";
   });
 }
