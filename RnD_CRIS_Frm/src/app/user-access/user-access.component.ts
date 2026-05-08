@@ -31,7 +31,7 @@ export class UserAccessComponent implements OnInit {
   }
 
   fetchUsers() {
-    this.http.get<{ status: string; users: newuser[] }>('http://localhost:8000/new-user-details/')
+    this.http.get<{ status: string; users: newuser[] }>('https://vendor-management-project-2-0c08.onrender.com/new-user-details/')
       .subscribe({
         next: (data) => {
           console.log('Users from API:', data);
