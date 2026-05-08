@@ -231,14 +231,18 @@ MIDDLEWARE = [
 # --------------------
 CORS_ALLOWED_ORIGINS = [
    'https://vendor-management-project-xbe7.vercel.app',
+   'https://vendor-management-project-2-0c08.onrender.com',
     # 'http://localhost:4200',  # Angular frontend
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://vendor-management-project-xbe7.vercel.app',
+     'https://vendor-management-project-2-0c08.onrender.com',
     'https://*.vercel.app',
+    'https://*.onrender.com',
 ]
 
+CORS_ALLOW_CREDENTIALS = True
 # --------------------
 # URLS & WSGI
 # --------------------
