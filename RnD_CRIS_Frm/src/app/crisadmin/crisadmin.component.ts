@@ -28,7 +28,7 @@ export class CrisadminComponent {
 
   // this.http.get('http://localhost:8000/api/current_user/', {
       this.http.get(`${this.BASE_URL}/current_user/`, {
-    headers: token ? { Authorization: `Bearer ${token}` } : {}  // NEW
+    headers: token ? { Authorization: `JWT ${token}` } : {}  // NEW
   }).subscribe({
     next: (data: any) => {
       console.log('Current user fetched:', data); // debug
