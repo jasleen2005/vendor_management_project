@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  // onLogin() {
+   onLogin() {
   //   if (this.username === 'div_test' && this.password === 'div_test') {
   //     localStorage.setItem('isLoggedIn', 'true');                                   
   //     localStorage.setItem('userName', 'div_test');                          
@@ -82,6 +82,6 @@ export class LoginComponent implements OnInit {
           this.errorMessage = err.error.message || 'Invalid username or password';
         }
       });
-   // }  
+    }  
 
  }
